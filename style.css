@@ -1,111 +1,103 @@
-body {
-  font-family: 'Cutive Mono', monospace;
-  /* width: 80%; */
-  margin: auto;
-  padding-top: 40px;
-  /* background-position: 0 -250px; */
-  background-color: #AAA99A;
-}
 
-p {
-   font-family: 'YoungSerifRegular';
-   font-weight: normal;
-   font-style: normal;
+body {
+  font-family: 'Lack-Regular', sans-serif;
+  margin: 1em;
+  background-color: #AAA99A;
 }
 
 .fast {
     position: absolute;
     top: 50px;
-    font-size: 20vw;
+    font-size: 16vw;
+    font-family: 'Lack-Line-Regular', sans-serif;
     text-transform: uppercase;
-    font-family: 'lack_lineregular';
-    /* -webkit-text-fill-color: #AAA99A;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: black; */
-    /* text-decoration: underline; */
-    /* transform: translateX(200px) translateY(-200px) skew(20deg) scale(2) rotateX(60deg); */
-    /* color: red; */
-    line-height: .6;
+    text-align: center;
+    line-height: .8;
     letter-spacing: 1.5;
-
-    /* animation-name: above;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 2;
-    animation-delay: 2s;
-    animation-direction: alternate; */
-    /* animation-name: scroll;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; */
-
-
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .slow {
-  /* float: left; */
-  margin-top: 450px;
-  margin-left: 250px;
-  padding: 20px;
-  background-color: #EB756C;
-  width: 70%;
-  font-size: 24px;
+  float: left;
+  margin-top: 500px;
+  padding: 25px;
+  text-decoration: underline;
+  /* background-color: #EB756C; */
+  /* width: 70%; */
+  font-size: 4vw;
   transition: background .5s ease-in-out;
   margin-bottom: 25px;
-
+  z-index: 1000px;
 }
 
-.slow:hover {
-  background-color: blue;
-  /* transform: rotate(45deg); */
-
+.slow.one {
+  color: #fb39b2;
+  animation-name: scroll;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
 }
 
-.wrapper {
-  perspective: 1000px;
+.slow.two {
+  color: #802927;
+  animation-name: reverse;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
 }
 
-@keyframes above {
-
-from {transform: translateX(0px);}
-to: {transform: translateX(900px);}
-
+.slow.three {
+  color: #86df57;
+  animation-name: scroll;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; */
+  animation-fill-mode: backwards;
 }
+
+.slow.four {
+  color: #640048;
+  font-weight: 900;
+  animation-name: reverse;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+/* animations  */
 
 @keyframes scroll {
 
-from {transform:translatex(-250px) ;}
+from {transform:translatex(1250px) ;}
+to {transform:translatex(-1250px) ;}
+
+}
+
+@keyframes reverse {
+
+from {transform:translatex(-1250px) ;}
 to {transform:translatex(1250px) ;}
 
 }
 
-/* @font-face {
-
-  font-face: 'Lack-Line-Regular';
-  src:  format('woff');
-
-} */
+/* font */
 
 @font-face {
-    font-family: 'lack_lineregular';
-    src: url('lack-line-regular-webfont.eot');
-    src: url('lack-line-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lack-line-regular-webfont.woff2') format('woff2'),
-         url('lack-line-regular-webfont.woff') format('woff'),
-         url('lack-line-regular-webfont.ttf') format('truetype'),
-         url('lack-line-regular-webfont.svg#lack_lineregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Lack-Line-Regular';
+  src: url(/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/Lack-Line-Regular.woff)  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    @font-face {
-        font-family: 'lackregular';
-        src: url('lack-regular-webfont.eot');
-        src: url('lack-regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('lack-regular-webfont.woff2') format('woff2'),
-             url('lack-regular-webfont.woff') format('woff'),
-             url('lack-regular-webfont.ttf') format('truetype'),
-             url('lack-regular-webfont.svg#lackregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+  font-family: 'Lack-Regular';
+  src: url(/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/Lack-Regular.woff)  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
