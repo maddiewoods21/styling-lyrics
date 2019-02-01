@@ -30,6 +30,10 @@ body {
   z-index: 1000px;
 }
 
+.slow hover {
+  color:black;
+}
+
 .slow.one {
   color: #fb39b2;
   animation-name: scroll;
