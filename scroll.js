@@ -1,0 +1,3 @@
+$.seamlessRolling({
+  speed: 10
+});

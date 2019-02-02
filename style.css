@@ -1,107 +1,170 @@
 
 body {
-  font-family: 'Lack-Regular', sans-serif;
-  margin: 1em;
-  background-color: #AAA99A;
+  font-family: "clifton-italic" ;
+  font-size: 28px ;
+  color: #182A39 ;
+  margin: auto;
+  width:1000px;
 }
 
-.fast {
-    position: absolute;
-    top: 50px;
-    font-size: 16vw;
-    font-family: 'Lack-Line-Regular', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: .8;
-    letter-spacing: 1.5;
-    color: rgba(0, 0, 0, 0.2);
+section {
+  display:grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height:1000px;
 }
 
-.slow {
-  float: left;
-  margin-top: 500px;
-  padding: 25px;
-  text-decoration: underline;
-  /* background-color: #EB756C; */
-  /* width: 70%; */
-  font-size: 4vw;
-  transition: background .5s ease-in-out;
-  margin-bottom: 25px;
-  z-index: 1000px;
+ .gotta-be {
+  border: 1px solid #182A39;
+  box-sizing: border-box;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.slow hover {
-  color:black;
+ul {
+  font-family: "solow-outline" ;
+  font-size: 36px ;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 43px;
+  text-align: center;
+  margin-left: -35px ;
+  list-style-type: none;
 }
 
-.slow.one {
-  color: #fb39b2;
-  animation-name: scroll;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: backwards;
+.verse-one .gotta-be {
+  background-color: #F2F4F1;
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 4;
 }
 
-.slow.two {
-  color: #802927;
-  animation-name: reverse;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 2s;
-  animation-fill-mode: backwards;
+.verse-two .gotta-be {
+  background-color: #FDFAF2;
+  grid-column: 3 / span 4;
+  grid-row: 2 / span 4;
 }
 
-.slow.three {
-  color: #86df57;
-  animation-name: scroll;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  /* animation-delay: 2s; */
-  animation-fill-mode: backwards;
+.verse-three .gotta-be {
+  background-color: #FFF5F1 ;
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 4;
 }
 
-.slow.four {
-  color: #640048;
-  font-weight: 900;
-  animation-name: reverse;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 2s;
-  animation-fill-mode: backwards;
+.verse-four .gotta-be {
+  background-color: #FEF8F2;
+  grid-column: 4 / span 4;
+  grid-row: 2 / span 4;
 }
 
-/* animations  */
+ .verse-one .image {
+  grid-column: 4 / span 4;
+  grid-row: 4 / span 4;
+}
 
-@keyframes scroll {
+.verse-two .image {
+ grid-column: 1 / span 4;
+ grid-row: 4 / span 4;
+}
 
-from {transform:translatex(1250px) ;}
-to {transform:translatex(-1250px) ;}
+.verse-three .image {
+ grid-column: 1 / span 4;
+ grid-row: 4 / span 4;
+}
+
+.verse-four .image {
+ grid-column: 1 / span 4;
+ grid-row: 4 / span 4;
+}
+
+.verse-one img {
+  max-width: 100%;
+}
+
+.verse-two img {
+  max-width: 100%;
+}
+
+.verse-three img {
+  max-width: 100%;
+}
+
+.verse-four img {
+  max-width: 100%;
+}
+
+
+ .and-i-know {
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   border: 1px solid #182A39;
+   box-sizing: border-box;
+}
+
+ .and-i-know p {
+   margin: 25px ;
+   max-width: 300px;
+ }
+
+.verse-one .and-i-know {
+    background-color: #F2F4F1;
+    grid-column: 7 / span 4;
+    grid-row: 7 / span 4;
+}
+
+.verse-two .and-i-know {
+    background-color: #FDFAF2;
+    grid-column: 4 / span 4;
+    grid-row: 5 / span 4;
+}
+
+.verse-three .and-i-know {
+    background-color: #FFF5F1;
+    grid-column: 4 / span 4;
+    grid-row: 5 / span 4;
+}
+
+.verse-four .and-i-know {
+    background-color: #FEF8F2;
+    grid-column: 4 / span 4;
+    grid-row: 5 / span 4;
+}
+
+@media (max-width:1100px) {
+
+body {
+    width:800px;
+    font-size: 20px ;
+}
+
+section {
+  height: 800px;
+}
+
+h3 {
+  font-size: 32px ;
+  line-height: 1.2;
 
 }
 
-@keyframes reverse {
-
-from {transform:translatex(-1250px) ;}
-to {transform:translatex(1250px) ;}
-
 }
-
-/* font */
 
 @font-face {
-  font-family: 'Lack-Line-Regular';
-  src: url(/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/Lack-Line-Regular.woff)  format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "clifton-italic" ;
+
+  src: url("/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/assets/fonts/Clifton-Italic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Lack-Regular';
-  src: url(/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/Lack-Regular.woff)  format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family:"solow-outline" ;
+
+  src: url("/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/assets/fonts/SoLow-OutlineRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family:"selfModern" ;
+
+  src: url("/Users/madelinewoods/Documents/RISD/2018_2019/winter_session/projects/styling-lyrics/assets/fonts/bretagne_self-modern_italic_trial.woff") format("woff");
 }
